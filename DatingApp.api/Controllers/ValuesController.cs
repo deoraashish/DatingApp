@@ -23,6 +23,7 @@ namespace DatingApp.API.Controllers
 
         
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> GetValues()
         {
             var values = await _context.Values.ToListAsync();
